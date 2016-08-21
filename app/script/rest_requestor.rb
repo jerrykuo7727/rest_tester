@@ -1,4 +1,7 @@
 require 'rest-client'
 
-url = "http://localhost:3000"
-puts RestClient.get(url)
+domain = "http://localhost:3000/"
+print "Please enter the path: "
+path = gets.chomp
+puts RestClient.get("#{domain}#{path}")
+#RestClient.post("#{domain}#{path}", "")
